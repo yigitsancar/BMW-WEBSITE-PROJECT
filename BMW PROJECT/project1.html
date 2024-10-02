@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .bdy {
+        background-color: rgb(229, 228, 227);
+      }
+      .wrapper {
+        margin: auto;
+        width: 100%;
+      }
+      .header {
+        margin: 0;
+        padding: 0;
+        background-color: #6c6c6c;
+        font-size: 70px;
+        color: white;
+        height: 100px;
+        text-align: center;
+      }
+      .header div a {
+        text-decoration: none;
+      }
+      .modelcontainer {
+        margin-top: 30px;
+      }
+      .logo {
+        height: 100%;
+        float: left;
+        margin-left: 0px;
+      }
+      .model4 {
+        margin-left: -45px;
+      }
+      .model1,
+      .model2,
+      .model3,
+      .model4 {
+        padding-top: 35px;
+        font-size: 30px;
+        width: 23%;
+        float: left;
+        text-align: center;
+        font-family: Copperplate, Papyrus, fantasy;
+      }
+
+      #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .model1 a:visited,
+      .model1 a:link,
+      .model4 a:visited,
+      a:link,
+      .model3 a:visited,
+      a:link,
+      .model2 a:visited,
+      a:link {
+        text-decoration: none;
+        color: white;
+      }
+      .model1 a:hover,
+      .model1 a:active,
+      .model2 a:hover,
+      .model2 a:active,
+      .model3 a:hover,
+      .model3 a:active,
+      .model4 a:hover,
+      .model4 a:active {
+        color: black;
+      }
+
+      .active-text {
+        padding-top: 35px;
+        font-size: 30px;
+        width: 23%;
+        float: left;
+        text-align: center;
+        font-family: Copperplate, Papyrus, fantasy;
+      }
+      .active-text .model4 {
+        margin-left: -45px;
+      }
+      .active-text a:visited,
+      .active-text a:link {
+        text-decoration: none;
+        color: black;
+      }
+      .active-text a:hover,
+      .active-text a:active {
+        color: black;
+      }
+    </style>
+  </head>
+  <body class="BDY">
+    <div class="wrapper">
+      <div class="header">
+        <div class="model1"><a href="sedan.html">SEDAN</a></div>
+        <div class="model2"><a href="suv.html">SUV</a></div>
+        <a href="project1.html" class="logo">
+          <img
+            src="https://i.pinimg.com/originals/c5/e0/12/c5e01235bc3665cc7d665ce6e591e3dc.png"
+            class="logo"
+          />
+        </a>
+        <div class="model3"><a href="sport.html">SPORT</a></div>
+        <div class="model4"><a href="consept.html">CONSEPT</a></div>
+      </div>
+
+      <div>
+        <video autoplay loop muted id="background-video">
+          <source
+            src="https://mediapool.bmwgroup.com/download/edown/tvFootageDownload.mp4?dokNo=PF0007947&actEvent=tvFootageH264"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </div>
+  </body>
+</html>

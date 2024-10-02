@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.bdy {
+  background-color: rgb(229, 228, 227);
+}
+.wrapper {
+  margin: auto;
+  width: 100%;
+}
+.header {
+  margin: 0;
+  padding: 0;
+  background-color: #6c6c6c;
+  font-size: 70px;
+  color: white;
+  height: 100px;
+  text-align: center;
+}
+.modelcontainer {
+  margin-top: 20px;
+}
+.logo {
+  height: 100%;
+  width: 7%;
+  float: left;
+}
+.model1,
+.model2,
+.model3,
+.model4 {
+  padding-top: 35px;
+  font-size: 30px;
+  width: 23.25%;
+  float: left;
+  text-align: center;
+  font-family: "Copperplate Gothic Light", fantasy;
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.model1 a:visited,
+.model1 a:link,
+.model4 a:visited,
+a:link,
+.model3 a:visited,
+a:link,
+.model2 a:visited,
+a:link {
+  text-decoration: none;
+  color: white;
+}
+.model1 a:hover,
+.model1 a:active,
+.model2 a:hover,
+.model2 a:active,
+.model3 a:hover,
+.model3 a:active,
+.model4 a:hover,
+.model4 a:active {
+  color: black;
+}
+
+.active-text {
+  padding-top: 35px;
+  font-size: 30px;
+  width: 23.25%;
+  float: left;
+  text-align: center;
+  font-family: "Copperplate Gothic Light", fantasy;
+}
+.active-text a:visited,
+.active-text a:link {
+  text-decoration: none;
+  color: black;
+}
+.active-text a:hover,
+.active-text a:active {
+  color: black;
+}
+.aracresim {
+  text-align: center;
+}
+
+.models {
+  width: 90%;
+  margin-top: -30px;
+}
+.models:hover {
+  transform: scale(1.1); /* Increase the scale to 120% */
+  transition: 0.2s;
+}
+.modelname {
+  margin-top: 40px;
+}
+.formbutton {
+  width: 120px;
+  height: 45px;
+  font-size: 14px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #6c757d;
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid #6c757d; /* Add border */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+  display: inline-block; /* Display as inline-block */
+  margin-right: 10px; /* Add margin to create space between buttons */
+}
+.formbutton:hover {
+  background-color: #6c757d;
+  color: white;
+}
+.custom-box {
+  margin: 60px auto;
+  min-height: 170px;
+  width: 70%;
+  padding: 20px;
+  background-color: white;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.522);
+  transition: 0.5s;
+  
+}
+.form {
+  text-align: center;
+  font-size: 20px;
+  width: 625px;
+  height: 650px;
+  background-color: rgba(251, 249, 249, 0.495);
+  margin-top: 10px;
+  margin-right: 100px;
+  float: right;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.522);
+  font-family: "Copperplate Gothic Light", fantasy;
+}
+
+.txtForm {
+  width: 450px;
+  padding: 14px 32px;
+  font-size: 16px;
+  border: 2px solid darkgray;
+  border-radius: 6px;
+}
+
+.btnForm {
+  padding: 10px 14px;
+  margin-left: 20px;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.359);
+  border: none;
+  font-family: "Copperplate Gothic Light", fantasy;
+  font-size: 17px;
+}

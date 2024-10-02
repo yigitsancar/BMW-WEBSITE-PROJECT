@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .bdy {
+        background-color: rgb(229, 228, 227);
+      }
+      .wrapper {
+        margin: auto;
+        width: 100%;
+      }
+      .header {
+        margin: 0;
+        padding: 0;
+        background-color: #6c6c6c;
+        font-size: 70px;
+        color: white;
+        height: 100px;
+        text-align: center;
+      }
+      .header div a {
+        text-decoration: none;
+      }
+      .modelcontainer {
+        margin-top: 30px;
+      }
+      .logo {
+        height: 100%;
+        float: left;
+        margin-left: 0px;
+      }
+      .model4 {
+        margin-left: -45px;
+      }
+      .model1,
+      .model2,
+      .model3,
+      .model4 {
+        padding-top: 35px;
+        font-size: 30px;
+        width: 23%;
+        float: left;
+        text-align: center;
+        font-family: Copperplate, Papyrus, fantasy;
+      }
+
+      #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .model1 a:visited,
+      .model1 a:link,
+      .model4 a:visited,
+      a:link,
+      .model3 a:visited,
+      a:link,
+      .model2 a:visited,
+      a:link {
+        text-decoration: none;
+        color: white;
+      }
+      .model1 a:hover,
+      .model1 a:active,
+      .model2 a:hover,
+      .model2 a:active,
+      .model3 a:hover,
+      .model3 a:active,
+      .model4 a:hover,
+      .model4 a:active {
+        color: black;
+      }
+
+      .active-text {
+        padding-top: 35px;
+        font-size: 30px;
+        width: 23%;
+        float: left;
+        text-align: center;
+        font-family: Copperplate, Papyrus, fantasy;
+      }
+      .active-text .model4 {
+        margin-left: -45px;
+      }
+      .active-text a:visited,
+      .active-text a:link {
+        text-decoration: none;
+        color: black;
+      }
+      .active-text a:hover,
+      .active-text a:active {
+        color: black;
+      }
+      .aracresim {
+        text-align: center;
+      }
+
+      .models {
+        width: 460px;
+        margin-top: -50px;
+
+        padding: 30px;
+      }
+      .models:hover {
+        transform: scale(1.1); /* Increase the scale to 120% */
+        transition: 0.2s;
+      }
+      .modelname {
+        margin-top: 20px;
+      }
+      .formbutton {
+        width: 120px;
+        height: 35px;
+        font-size: 14px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: #6c757d;
+        background-color: transparent;
+        background-image: none;
+        border: 2px solid #6c757d; /* Add border */
+        border-radius: 5px; /* Add border-radius for rounded corners */
+        display: inline-block; /* Display as inline-block */
+        margin-right: 10px; /* Add margin to create space between buttons */
+      }
+      .formbutton:hover {
+        background-color: #6c757d;
+        color: white;
+      }
+      .custom-box {
+        margin: 50px auto;
+        min-height: 150px;
+        width: 60%;
+        padding: 20px;
+        background-color: white;
+        display: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.522);
+        transition: 0.5s;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-style: italic;
+        font-size: 15px;
+        background-color: rgba(62, 62, 62, 0.164);
+      }
+    </style>
+  </head>
+  <body class="BDY">
+    <div class="wrapper">
+      <div class="header">
+        <div class="model1"><a href="sedan.html">SEDAN</a></div>
+        <div class="model2"><a href="suv.html">SUV</a></div>
+        <a href="project1.html" class="logo">
+          <img
+            src="https://i.pinimg.com/originals/c5/e0/12/c5e01235bc3665cc7d665ce6e591e3dc.png"
+            class="logo"
+          />
+        </a>
+        <div class="active-text"><a href="sport.html">SPORT</a></div>
+        <div class="model4"><a href="consept.html">CONSEPT</a></div>
+      </div>
+      <div class="modelcontainer">
+        <div class="col-lg-4 col-xs-12 aracresim">
+          <img
+            class="models"
+            src="https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-2545xM4RIyFnbm9Mb3AgyyIJrjG0suyJRBODlsrjGpuaprQbhSIqppglBgm9jJl384MlficYiGHqoQxYLW7%25f3tiJ0PCJirQbLDWcQW7%251uSDRqoQh47wMvcYi9kQaaMb3islBglUHdjcRScHJzuMbnMdQzdyJGy58AErQ%25r9RnYW8zWub8KqogqaJNQl3ilUQt9cRScH8ZuMbnMdoPiyJGy53L5rQ%25r9YaJW8zWuEJQqogqaFEHl3ilUj98cRScHzoBMbnMdgBuyJGy5iY3rQ%25r9SKCW8zWun3CqogqaGEFl3ilU%25e0cRScHzmiMbnMdgokyJGy5iztrQ%25r9SejW8zWuKF%25qogqaDC8l3ilUCQzcRScH48WMbnMdezdyJGy5mgprQ%25r983UW8zWuoYEqogqa3Jal3ilUR%256cRScHbRPMbnMdJWoyJGy5Q4ErQ%25r993UW8zWuuRbqogqaab4l3ilUUb5cRScHHBBMbnMdjWYyJGy5sobrQbBUq2rjGTSFhrQb9%25cQSW7%25IER8MI8YHQA"
+            alt="BMW M3"
+            width="70%"
+            onmouseover="showCustomBox('customBox1')"
+          />
+          <p class="modelname">BMW Z4 Roaster</p>
+          <a href="form.html"><button class="formbutton">RESERVE</button></a>
+        </div>
+        <div class="col-lg-4 col-xs-12 aracresim">
+          <img
+            class="models"
+            src="https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-2545xM4RIyFnbm9Mb3AgyyIJrjG0suyJRBODlsrjGpuaprQbhSIqppglBgnRuIl384MlficYiGHqoQxYLW7%25f3tiJ0PCJirQbLDWcQW7%251uEUHqoQh47wMvcYi9kQC5Mb3islBglUbD%25cRScHzwgMbnMd0B9yJGy558arQ%25r9SQwW8zWunmHqogqaaU4l3ilUQt9cRScHH5iMbnMdobeyJGy53ARrQ%25r9RXnW8zWuuD%25qogqaab4l3ilUCQrcRScH4%25HMbnMdezJyJGy53LUrQ%25r9SbYW8zWuKSJqogqa3o1l3ilURI8cRScHbDBMbnMdJfiyJGy5Q9orQ%25r98KGW8zWuonjqogqaFH8l3ilUjJJcRScH7o3MbnMdgmKyJGy5i03rQ%25r9SBYW8zWunCbqogqaG4zl3ilU%25e0cRScHHQ9MbnMdgBuyJGy5i4FrQ%25r9sKJW8zWunUjqogqaDjzl3ilUjFdcRoj9y6cYiXzBLcRoHSWRzMES208bq2b7uRI"
+            alt=""
+            width="70%"
+            onmouseover="showCustomBox('customBox2')"
+          />
+          <p class="modelname">BMW 4 Series Cabrio</p>
+          <a href="form.html"><button class="formbutton">RESERVE</button></a>
+        </div>
+        <div class="col-lg-4 col-xs-12 aracresim">
+          <img
+            class="models"
+            src="https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-2545xM4RIyFnbm9Mb3AgyyIJrjG0suyJRBODlsrjGpuaprQbhSIqppglBgR5HJl384MlficYiGHqoQxYLW7%25f3tiJ0PCJirQbLDWcQW7%251u2DJqoQh47wMvcYi967rfMb3islBglUbv8cRScHJwzMbnMdo13yJGy536nrQ%25r9RXHW8zWuEUQqogqaFQ8l3ilUj80cRScH7e7MbnMd0zqyJGy5BOKrQ%25r9Yp9W8zWunJHqogqaGQFl3ilU%25FjcRScHzjgMbnMdgsSyJGy5ic0rQ%25r9snYW8zWuKbGqogqaDJKl3ilUCQIcRScH4%25bMbnMdJmSyJGy5Q3drQ%25r98R9W8zWuobSqogqa3GIl3ilUR%25gcRScHbU8MbnMdJbkyJGy5Q4ErQ%25r993nW8zWuu3HqogqaaUbl3ilUUvmcRScHHwoMbnMddVHyJGy55OQrQbBUq2rjGTSFhrQb9%25cQSW7%25IER8MI8YHQA"
+            alt=""
+            width="70%"
+            onmouseover="showCustomBox('customBox3')"
+          />
+          <p class="modelname">BMW M8 Coupe</p>
+          <a href="form.html"><button class="formbutton">RESERVE</button></a>
+        </div>
+      </div>
+      <div style="clear: both"></div>
+
+      <!-- Dinamik olarak görünecek kutucuklar -->
+      <div class="custom-box" id="customBox1">
+        <p>
+          Technical specifications of the BMW Z4 Roadster:<br /><br />
+
+          Engine Power in horsepower (kW): 258/5000-6500<br />
+
+          Acceleration 0-100 km/h (s): 5.4<br />
+
+          Average fuel consumption (lt/100km): 7.3-6.9<br />
+
+          Average CO2 emissions (g/km): 166-157<br /><br />
+
+          The BMW Z4 combines the dynamics of a sports car with the freedom of a
+          roadster.<br />
+
+          Iconic roadster design with enhanced aesthetic appearance<br />
+          Approximately 258 hp (190 kW) powerful driving dynamics and high
+          precision handling<br />
+          Improved efficiency and dynamics with M aerodynamic equipment.
+        </p>
+      </div>
+      <div class="custom-box" id="customBox2">
+        <p>
+          The New BMW 430i xDrive Cabrio, with its dynamic design and
+          exceptional driving dynamics, offers everything you would expect from
+          a premium car, not only in terms of driving pleasure but also with a
+          modern reinterpretation of its interior and exterior elements.
+          Equipped with a 2.0-liter petrol engine, the New BMW 430i xDrive
+          Cabrio generates a maximum power of 245 hp and a maximum torque of 400
+          Nm, reaching 0 to 100 km/h in 6.3 seconds.
+        </p>
+      </div>
+      <div class="custom-box" id="customBox3">
+        <p>
+          The BMW 8 Series Coupé M cars offer maximum sportiness and luxury
+          driving pleasure both on the road and on the race track. The BMW M8
+          Competition Coupé and BMW M8 Coupé combine the M genes with superior
+          exclusivity.<br /><br />
+          BMW M8 Competition Coupé:<br />
+          - Fuel consumption (liters/100 km) (average): 11.4–11<br />
+          - CO2 emissions (g/km) (average): 260–251<br /><br />
+          BMW M8 Coupé:<br />
+          - Fuel consumption (liters/100 km) (average): 11.4–11<br />
+          - CO2 emissions (g/km) (average): 260–251
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function showCustomBox(boxId) {
+        // Hide all custom boxes
+        var customBoxes = document.getElementsByClassName("custom-box");
+        for (var i = 0; i < customBoxes.length; i++) {
+          customBoxes[i].style.display = "none";
+        }
+        // Show the selected custom box
+        document.getElementById(boxId).style.display = "block";
+      }
+    </script>
+  </body>
+</html>
